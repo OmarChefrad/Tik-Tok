@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { NextPage } from "next"
-import { useRouter } from "next/router"
+// import { NextPage } from "next"
+// import { useRouter } from "next/router"
 import Link from "next/link"
 import GoogleLogin from "react-google-login"
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai"
@@ -17,18 +17,15 @@ function Sidebar() {
     "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded"
 
   return (
-    <motion.div>
-      <motion.div
+    <div>
+      <div
         className="block xl-hidden m-2 ml-4 mt-3 text-xl cursor-pointer"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
         onClick={() => {
           setShowSidebar((prev) => !prev)
         }}
       >
         {showSidebar ? <ImCancelCircle /> : <AiOutlineMenu />}
-      </motion.div>
+      </div>
       {showSidebar && (
         <motion.div
           className="xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-gray-200 xl:border-gray-200 p-4"
@@ -58,8 +55,8 @@ function Sidebar() {
                   clientId=""
                   render={(renderProps) => (
                     <button
-                      className="bg-white text-lg text-gray-800
-                      border-1 cursor-pointer border-gray-300 rounded-lg font-semibold px-6 py-3 rounded-md outline-none w-full mt-3  hover:bg-black hover:text-gray-100 select-none bg-gray-100 decoration-gray-600"
+                      className=" text-lg text-gray-800
+                      border-1 cursor-pointer border-gray-300 font-semibold px-6 py-3 rounded-md outline-none w-full mt-3  hover:bg-black hover:text-gray-100 select-none bg-gray-100 decoration-gray-600"
                       onClick={renderProps.onClick}
                       disabled={renderProps.disabled}
                     >
@@ -83,7 +80,7 @@ function Sidebar() {
           <Footer />
         </motion.div>
       )}
-    </motion.div>
+    </div>
   )
 }
 

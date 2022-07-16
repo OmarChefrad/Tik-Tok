@@ -1,8 +1,17 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import axios from "axios"
+import { Video } from "../types"
+import VideoCard from "../components/VideoCard"
+import NoResult from "../components/NoResult"
 
-const Home: NextPage = () => {
+interface Iprops {
+  videos: Video[]
+}
+
+const Home = ({ videos }: Iprops) => {
+  console.log(videos)
+
   return (
     <div>
       <Head>
@@ -12,19 +21,27 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className="text-4xl">Discover TikTok</h1>
+        <div className="flex flex-col gap-10 videos h-full">
+          {videos.length ? (
+            videos.map((video: Video) => (
+              <VideoCard post={video} key={video._id} />
+            ))
+          ) : (
+            <NoResult text={"No videos"} />
+          )}
+        </div>
       </main>
     </div>
   )
 }
 
 export const getServerSideProps = async () => {
-  const response = await axios.get(`http://localhost:3000/api/post`)
-
-  console.log(response.data.name)
+  const { data } = await axios.get(`http://localhost:3000/api/post`)
 
   return {
-    props: {},
+    props: {
+      videos: data,
+    },
   }
 }
 
