@@ -10,8 +10,6 @@ interface Iprops {
 }
 
 const Home = ({ videos }: Iprops) => {
-  console.log(videos)
-
   return (
     <div>
       <Head>

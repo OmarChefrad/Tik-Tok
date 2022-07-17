@@ -3,7 +3,9 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
+    
     extend: {
       width: {
         1600: "1600px",
@@ -29,8 +31,9 @@ module.exports = {
       },
       colors: {
         primary: "rgb(22, 24, 35)",
-        "regalblue": "#23e7e1",
-        "silentred": "#f62851",
+        regalblue: "#23e7e1",
+        silentred: "#f62851",
+        silentregal: "linear-gradient(260deg,#23e7e1, #f62851)",
       },
       height: {
         "88vh": "88vh",

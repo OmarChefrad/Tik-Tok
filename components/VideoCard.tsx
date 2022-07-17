@@ -75,7 +75,7 @@ const VideoCard: NextPage<Iprops> = ({ post }) => {
             ></video>
           </Link>
           {isHover && (
-            <div className="absolute bottom-2 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-48 md:gap-56 lg:justify-between w-[100px] md:w-[50px] md:pl-8 pl-6 ">
+            <div className="absolute bottom-2 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-48 md:gap-56 lg:justify-between w-[100px] md:w-[50px] md:pl-8">
               {playing ? (
                 <button onClick={onVideoPress}>
                   <BsFillPauseFill className="text-2xl text-black lg:text-4xl" />
@@ -88,12 +88,12 @@ const VideoCard: NextPage<Iprops> = ({ post }) => {
                 </button>
               )}
               {isVideoMuted ? (
-                <button onClick={() => setIsVideoMuted(false)} className="">
-                  <HiVolumeOff className="text-2xl text-black lg:text-4xl" />.
+                <button onClick={() => setIsVideoMuted(false)}>
+                  <HiVolumeOff className="text-2xl text-black lg:text-4xl " />.
                 </button>
               ) : (
                 <button onClick={() => setIsVideoMuted(true)}>
-                  <HiVolumeUp className="text-2xl text-black lg:text-4xl" />.
+                  <HiVolumeUp className="text-2xl text-black lg:text-4xl " />.
                 </button>
               )}
             </div>

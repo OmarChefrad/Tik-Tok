@@ -14,7 +14,7 @@ function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(true)
   const [userProfile, setuserProfile] = useState(false)
   const normalLink =
-    "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded"
+    "flex items-center h-12 md:pl-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded hover:bg-primary hover:text-white hover:bg-black"
 
   return (
     <div>
@@ -31,7 +31,7 @@ function Sidebar() {
           className="xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-gray-200 xl:border-gray-200 p-4"
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="xl:border-gray-200 xl:pb-4">
             <Link href="/">
@@ -39,9 +39,16 @@ function Sidebar() {
                 <p className="text-2xl">
                   <AiFillHome />
                 </p>
-                <span className="text-gray-800 text-xl hidden xl:block">
-                  For You
+                <span className="md:block hidden pl-5 hover:text-regalblue">
+                  F
                 </span>
+                <span className="md:block hidden hover:text-silentred">o</span>
+                <span className="md:block hidden hover:text-regalblue">r</span>
+                <span className="md:block hidden pl-1 hover:text-silentred">
+                  Y
+                </span>
+                <span className="md:block hidden hover:text-regalblue">o</span>
+                <span className="md:block hidden hover:text-silentred">u</span>
               </div>
             </Link>
           </div>
