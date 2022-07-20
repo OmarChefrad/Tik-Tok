@@ -33,29 +33,29 @@ function Sidebar() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="xl:border-gray-200 xl:pb-4">
+          <div className="md:border-gray-200 xl:pb-2">
             <Link href="/">
               <div className={normalLink}>
                 <p className="text-2xl">
                   <AiFillHome />
                 </p>
-                <span className="md:block hidden pl-5 hover:text-regalblue">
+                <span className="xl:block hidden pl-5 hover:text-regalblue">
                   F
                 </span>
-                <span className="md:block hidden hover:text-silentred">o</span>
-                <span className="md:block hidden hover:text-regalblue">r</span>
-                <span className="md:block hidden pl-1 hover:text-silentred">
+                <span className="xl:block hidden hover:text-silentred">o</span>
+                <span className="xl:block hidden hover:text-regalblue">r</span>
+                <span className="xl:block hidden pl-1 hover:text-silentred">
                   Y
                 </span>
-                <span className="md:block hidden hover:text-regalblue">o</span>
-                <span className="md:block hidden hover:text-silentred">u</span>
+                <span className="xl:block hidden hover:text-regalblue">o</span>
+                <span className="xl:block hidden hover:text-silentred">u</span>
               </div>
             </Link>
           </div>
           {!userProfile && (
-            <div className="px-2 py-4 hidden xl:block">
-              <p className="text-gray-600 pl-10 font-semibold ">
-                log in to like and comment on Videos
+            <div className="px-2 py-4 hidden xl:block ">
+              <p className="text-gray-400 font-normal">
+                Log in to follow creators, like videos, and view comments.
               </p>
               <div className="pr-2">
                 <GoogleLogin

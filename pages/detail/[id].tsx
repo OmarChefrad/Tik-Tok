@@ -36,14 +36,7 @@ const Detail = ({ postDetails }: IProps) => {
     }
   }
 
-  let linkStyle =
-    "text-9xl md:text-6xl text-white cursor-pointer hidden hover:visible"
-
-  useEffect(() => {
-    if (post && videoRef?.current) {
-      videoRef.current.muted = isVideoMuted
-    }
-  }, [post, isVideoMuted])
+  let linkStyle = "text-9xl  md:text-6xl text-white cursor-pointer"
 
   const handleLike = async (like: boolean) => {
     if (userProfile) {
@@ -57,10 +50,16 @@ const Detail = ({ postDetails }: IProps) => {
     }
   }
 
+  useEffect(() => {
+    if (post && videoRef?.current) {
+      videoRef.current.muted = isVideoMuted
+    }
+  }, [post, isVideoMuted])
+
   if (!post) return null
 
   return (
-    <div className="flex w-full h-full absolute left-0 top-0 bg-white flex-col md:flex-nowrap md:flex-col p-0">
+    <div className="flex w-full h-full absolute left-0 top-0 bg-white flex-col md:flex-nowrap p-0">
       <div className="relative flex-col md:flex-row flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black bg-cover">
         <div className="absolute top-6 left-2 md:left-6 flex gap-6 z-50">
           <p onClick={() => router.back()}>
@@ -120,7 +119,7 @@ const Detail = ({ postDetails }: IProps) => {
               </>
             </Link>
           </div>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row">
             <Link href="/">
               <div className="flex items-center gap-2 md:gap-0">
                 <p className="flex flex-row items-center md:text-base text-4xl font-bold text-slate-800 font-sans pl-3 md:w-32">
@@ -132,12 +131,13 @@ const Detail = ({ postDetails }: IProps) => {
           </div>
         </div>
         <div className="absolute pr-[500px] md:pr-0 md:pl-[1450px] md:mb-[600px] md:mt-[150px] mt-[1800px] flex flex-col">
-          <p className="px-10 pl-16 md:pl-32 mt-12 md:mt-24 md:text-base text-3xl w-[300px] text-gray-800">
+          <p className="px-10 pl-20 md:pl-[120px] mt-12 md:mt-24 md:text-xl font-sans text-3xl w-[300px] text-gray-800">
             {post.caption}
           </p>
           <div className="mt-10 px-10">
             {userProfile && (
               <LikeButton
+                likes={post.likes}
                 handleLike={() => handleLike(true)}
                 handleDislike={() => handleLike(false)}
               />

@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
   }
-}
+} */
 
 html,
 body {
