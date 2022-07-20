@@ -9,8 +9,8 @@ import NoResults from "./NoResults"
 const Comments = () => {
   const comments = []
   return (
-    <div className="border-t-2 border-gray-200 pt-4 ml-[50px] px-10 bg-slate border-b-2 lg:pb-[100px]">
-      <div className="overflow-scroll lg:h-[475px]">
+    <div className="border-t-2 border-gray-200 pt-4 pl-[50px] mx-10 bg-slate border-b-2 lg:pb-[100px]">
+      <div className="overflow-scroll lg:h-[50px]">
         {comments.length ? (
           <div>videos</div>
         ) : (
