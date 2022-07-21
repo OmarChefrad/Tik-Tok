@@ -104,7 +104,7 @@ const Detail = ({ postDetails }: IProps) => {
           </div>
         </div>
 
-        <div className="absolute pr-[500px] md:pr-0 md:pl-[1450px] md:mb-[600px] md:mt-0 mt-[1600px] text-gray-400 flex flex-row">
+        <div className="absolute pr-[500px] md:pr-0 md:pl-[1450px] md:mb-[600px] md:mt-0 mt-[2000px] text-gray-400 flex flex-row">
           <div className="md:w-16 md:h-16 w-24 h-10 text-5xl md:text-sm">
             <Link href="/">
               <>
@@ -130,11 +130,11 @@ const Detail = ({ postDetails }: IProps) => {
             </Link>
           </div>
         </div>
-        <div className="absolute pr-[500px] md:pr-0 md:pl-[1450px] md:mb-[600px] md:mt-[150px] mt-[1800px] flex flex-col">
-          <p className="px-10 pl-20 md:pl-[120px] mt-12 md:mt-24 md:text-xl font-sans text-3xl w-[300px] text-gray-800">
+        <div className="absolute md:pr-0 md:pl-[1530px] md:mb-[600px] md:mt-[160px] mt-[2200px] flex flex-row md:flex-col">
+          <p className="pl-0 md:pl-[150px] mt-12 md:mt-24 md:text-xl font-sans text-4xl md:w-[300px] w-full text-gray-800">
             {post.caption}
           </p>
-          <div className="mt-10 px-10">
+          <div className="mt-7 md:mt-10 px-5 md:px-10">
             {userProfile && (
               <LikeButton
                 likes={post.likes}

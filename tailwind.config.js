@@ -3,9 +3,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  
+
   theme: {
-    
     extend: {
       width: {
         1600: "1600px",
