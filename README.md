@@ -1,15 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [TikTok](https://nextjs.org/) project bootstrapped with tailwind css and scripted via Typescript and content maneged by sanity cms
 
-## Getting Started
+Check out the [Website] at (https://nextjs.org/docs/deployment).
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+all copywrite owned by © ByteDance .
 ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# Tik-Tok
+# Tik-Tok made by Umar
