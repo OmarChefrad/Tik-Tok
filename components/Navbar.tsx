@@ -31,7 +31,7 @@ function Navbar() {
         {userProfile ? (
           <div className="flex gap-5 md:gap-10">
             <Link href="/upload">
-              <button className="rounded-3xl px-2 md:px-4 text-md font-semibold flex items-center md:mt-1 md:h-12  shadow-md shadow-slate-300 md:shadow-md md:shadow-slate-300 hover:bg-black hover:text-white">
+              <button className="rounded-3xl px-2 md:px-4 text-md font-semibold flex items-center md:mt-3 md:h-8 shadow-md shadow-slate-300 md:shadow-md md:shadow-slate-300 hover:bg-black hover:text-white">
                 <IoMdAdd className="text-xl hover:text-white" />
                 <span className="hover:text-regalblue">U</span>
                 <span className="hover:text-silentred">p</span>
@@ -44,7 +44,7 @@ function Navbar() {
             {userProfile.image && (
               <Link href="/">
                 <>
-                  <div className="cursor-pointer rounded-full bg-gradient-to-r from-regalblue to-silentred w-12 h-12 p-[2px] mt-1 shadow-md shadow-slate-400 md:shadow-md  md:shadow-slate-400">
+                  <div className="cursor-pointer rounded-full bg-gradient-to-r from-regalblue to-silentred w-12 h-12 p-[2px] mt-1 shadow-md shadow-slate-300 md:shadow-md  md:shadow-slate-300">
                     <Image
                       width={50}
                       height={50}
