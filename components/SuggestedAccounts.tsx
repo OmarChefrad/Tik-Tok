@@ -22,7 +22,7 @@ function SuggestedAccounts() {
         {allUsers.slice(0, 6).map((user: IUser) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
             <div className="flex gap-3 hover:bg-black text-gray hover:text-white p-2 cursor-pointer font-semibold rounded">
-              <div className="w-8 h-8">
+              <div className="w-8 h-8 pb-2">
                 <Image
                   src={user.image}
                   width={34}
@@ -32,11 +32,17 @@ function SuggestedAccounts() {
                   layout="responsive"
                 />
               </div>
-              <div className="hidden md:block ">
-                <p className="flex gap-1 items-center tex-md lowercase">
-                  {user.userName.replaceAll(" ", "")}
-                </p>
-                <GoVerified />
+              
+              <div>
+                <div className="hidden md:block">
+                  <p className="flex gap-1 tex-md lowercase">
+                    {user.userName.replaceAll(" ", "")}
+                    <GoVerified className="mt-1 ml-2" />
+                  </p>
+                  <p className="text-sm Capitilize text-gray-400">
+                    {user.userName.replaceAll(" ", "")}
+                  </p>
+                </div>
               </div>
             </div>
           </Link>
