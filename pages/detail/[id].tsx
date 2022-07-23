@@ -96,10 +96,10 @@ const Detail = ({ postDetails }: IProps) => {
                 ></video>
               </div>
 
-              <div className="absolute top-[45%] left-[40%]  cursor-pointer">
+              <div className="absolute top-[45%] left-[45%]  cursor-pointer">
                 {!isPlaying && (
                   <button onClick={onVideoClick}>
-                    <BsFillPlayFill className="text-white text-6xl lg:text-8xl" />
+                    <BsFillPlayFill className="text-white text-6xl lg:text-6xl" />
                   </button>
                 )}
               </div>
@@ -137,12 +137,15 @@ const Detail = ({ postDetails }: IProps) => {
                 </div>
               </Link>
               <div className="px-10">
-                <p className=" text-md text-gray-600">{post.caption}</p>
+                <p className="text-md font-mono text-gray-600 md:pl-20">
+                  {post.caption}
+                </p>
               </div>
-              <div className="mt-10 px-10">
+              <div className="mt-1 md:mt-3 px-10">
                 {userProfile && (
                   <LikeButton
                     likes={post.likes}
+                    flex="flex"
                     handleLike={() => handleLike(true)}
                     handleDislike={() => handleLike(false)}
                   />

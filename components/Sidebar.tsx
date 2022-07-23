@@ -14,7 +14,7 @@ function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(true)
   const [userProfile, setuserProfile] = useState(false)
   const normalLink =
-    "flex items-center h-12 md:pl-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded hover:bg-primary hover:text-white hover:bg-black"
+    "flex items-center h-12 md:pl-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded hover:bg-black"
 
   return (
     <div>
@@ -33,7 +33,7 @@ function Sidebar() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="md:border-gray-200 xl:pb-2">
+          <div className="md:border-gray-200 xl:pb-2 ">
             <Link href="/">
               <div className={normalLink}>
                 <p className="text-2xl">
