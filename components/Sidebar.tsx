@@ -14,7 +14,7 @@ function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(true)
   const [userProfile, setuserProfile] = useState(false)
   const normalLink =
-    "flex items-center h-12 md:pl-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded hover:bg-black"
+    "flex items-center h-12 md:pl-3 justify-center xl:justify-start cursor-pointer font-semibold text-gray-800 rounded hover:bg-black hover:text-white"
 
   return (
     <div>

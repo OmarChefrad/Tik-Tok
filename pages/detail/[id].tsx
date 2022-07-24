@@ -79,7 +79,7 @@ const Detail = ({ postDetails }: IProps) => {
     <>
       {post && (
         <div className="flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap">
-          <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center">
+          <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black bg-center">
             <div className="opacity-90 absolute top-6 left-2 lg:left-6 flex gap-6 z-50">
               <p className="cursor-pointer " onClick={() => router.back()}>
                 <MdOutlineCancel className="text-white text-[35px] hover:opacity-90" />
@@ -128,7 +128,7 @@ const Detail = ({ postDetails }: IProps) => {
                     src={post.postedBy.image}
                   />
                   <div>
-                    <div className="text-xl font-bold lowercase tracking-wider flex gap-2 items-center justify-center">
+                    <div className="text-base font-bold lowercase tracking-wider flex gap-2 items-center justify-center">
                       {post.postedBy.userName.replace(/\s+/g, "")}{" "}
                       <GoVerified className="text-blue-400 text-xl" />
                     </div>

@@ -21,8 +21,8 @@ function SuggestedAccounts() {
       <div>
         {allUsers.slice(0, 6).map((user: IUser) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
-            <div className="flex gap-3 hover:bg-black text-gray hover:text-white p-2 cursor-pointer font-semibold rounded">
-              <div className="w-8 h-8 pb-2">
+            <div className="flex gap-3 hover:bg-black text-gray hover:text-white mt-2 pl-1 cursor-pointer font-semibold rounded">
+              <div className="w-12 h-12 pb-2">
                 <Image
                   src={user.image}
                   width={34}
@@ -32,7 +32,7 @@ function SuggestedAccounts() {
                   layout="responsive"
                 />
               </div>
-              
+
               <div>
                 <div className="hidden md:block">
                   <p className="flex gap-1 tex-md lowercase">
