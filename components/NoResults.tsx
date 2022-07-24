@@ -12,7 +12,7 @@ const NoResult = ({ text }: Iprops) => {
       <p className="text-4xl">
         {text === "No comments yet" ? <BiCommentX /> : <MdOutlineVideocamOff />}
       </p>
-      <p className="text-2xl md:text-base text-center">{text}</p>
+      <p className="text-base md:text-base text-center">{text}</p>
     </div>
   )
 }
