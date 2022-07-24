@@ -18,7 +18,7 @@ function Navbar() {
 
   const handleSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault()
-    router.push(`/search?q=${searchValue}`)
+    router.push(`/search/${searchValue}`)
   }
 
   return (
