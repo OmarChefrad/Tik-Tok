@@ -85,7 +85,7 @@ function Navbar() {
         {userProfile ? (
           <div className="flex gap-5 h-12 md:gap-10">
             <Link href="/upload">
-              <button className="rounded-lg md:h-24 h-12 px-2 md:px-4 text-md font-semibold flex items-center md:mt-3 shadow-md shadow-slate-300 md:shadow-md md:shadow-slate-300 hover:bg-black hover:text-white">
+              <button className="rounded-lg md:h-8 h-12 px-2 md:px-4 text-md font-semibold flex items-center md:mt-3 shadow-md shadow-slate-300 md:shadow-md md:shadow-slate-300 hover:bg-black hover:text-white">
                 <IoMdAdd className="text-xl hover:text-white" />
                 <span className="hover:text-regalblue">U</span>
                 <span className="hover:text-silentred">p</span>
