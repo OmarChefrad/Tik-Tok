@@ -76,11 +76,11 @@ const Comments = ({
       </div>
       {userProfile && (
         <div className="absolute bottom-0 left-0  pb-6 px-2 md:px-10 ">
-          <form onSubmit={addComment} className="flex gap-4">
+          <form onSubmit={addComment} className="flex gap-2">
             <input
               value={comment}
               onChange={(e) => setComment(e.target.value.trim())}
-              className="bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg"
+              className="bg-primary ml-3 pl-2 py-4 text-md font-medium border-2 w-[227px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg"
               placeholder="Add comment.."
             />
             <button
@@ -90,7 +90,7 @@ const Comments = ({
               <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-rose-400 rounded-full blur-md ease"></span>
               <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
                 <span className="absolute bottom-0 left-0 w-24 h-28 -ml-10 bg-red-400 rounded-full blur-md"></span>
-                <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-silentred rounded-full blur-md"></span>
+                <span className="absolute bottom-0 right-0 w-24 h-24 -mr-0 bg-silentred rounded-full blur-md"></span>
               </span>
               <span className="relative text-white">
                 {isPostingComment ? "Commenting" : "Comment"}
